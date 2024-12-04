@@ -1,0 +1,13 @@
+dev:
+  preparativo:
+    - yarn
+  execução:
+    - yarn dev
+
+prod:
+  preparativo:
+    - yarn
+    - yarn build
+    - npm prune --prod
+  execução:  
+    - yarn start
