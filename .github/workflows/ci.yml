@@ -32,3 +32,5 @@ jobs:
     - name: Push image
       run: |
         docker push devleofabricio/deploy.docker.nextjs:${{ steps.generate_sha.outputs.sha }}
+        docker tag devleofabricio/deploy.docker.nextjs:${{ steps.generate_sha.outputs.sha }} devleofabricio/deploy.docker.nextjs:latest
+        docker push devleofabricio/deploy.docker.nextjs:latest
